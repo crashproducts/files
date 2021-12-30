@@ -1,0 +1,207 @@
+/* =================================
+------------------------------------
+  Game Warrior Template
+  Version: 1.0
+ ------------------------------------ 
+ ====================================*/
+
+/*---------------------------*/
+/* Template default CSS
+/*---------------------------*/
+
+html,
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+            }
+/* Preloder */
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #fff;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+/*------------------
+  Header section
+---------------------*/
+
+.header-section {
+	background: #131313;
+	clear: both;
+	overflow: hidden;
+	padding: 18px 0;
+	border-bottom: 1px solid #ffb320;
+}
+
+
+.user-panel {
+	float: center;
+	font-weight: 5200;
+	background: #000;
+	padding: 24px 28px;
+	border-radius: 30px;
+}
+
+.user-panel a {
+	font-size: 14px;
+	color: #000;
+}
+
+.main-menu {
+	float: right;
+	margin-right: -4px;
+}
+
+.main-menu ul {
+	list-style: none;
+}
+
+.main-menu ul li {
+	display: inline;
+}
+
+.main-menu ul li a {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	margin-left: 35px;
+	font-weight: 500;
+	padding: 10px 5px;
+}
+
+.main-menu ul li a:hover {
+	color: #ffb320;
+}
+
+.header-btn {
+	float: right;
+	margin-right: 0;
+}
+
+.nav-switch {
+	display: none;
+}
+
+/*---------------------
+  Latest News section
+-----------------------*/
+
+.latest-news-section {
+	overflow: hidden;
+	display: block;
+	clear: both;
+	background: #131313;
+	padding: 24px 0;
+	position: relative;
+}
+
+.ln-title {
+	position: absolute;
+	height: 100%;
+	width: 29%;
+	left: 0;
+	top: 0;
+	text-align: right;
+	padding-top: 24px;
+	padding-right: 66px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	background: #ffb320;
+	z-index: 1;
+}
+
+.news-ticker {
+	width: 71%;
+	float: right;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.news-ticker-contant .nt-item {
+	margin-right: 35px;
+	color: #fff;
+	display: inline-block;
+}
+
+.news-ticker-contant .nt-item span {
+	margin-right: 35px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+	padding: 4px 20px;
+}
+
+.news-ticker-contant .nt-item span.new {
+	background: #ff205f;
+}
+
+.news-ticker-contant .nt-item span.strategy {
+	background: #4eae60;
+}
+
+.news-ticker-contant .nt-item span.racing {
+	background: #694eae;
+}
+

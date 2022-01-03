@@ -15,10 +15,10 @@ html,
                 padding: 0;
                 width: 100%;
                 height: 100%;
-                background-color: #000000;
+                                background-image: url('https://www.connectesport.com/wp-content/uploads/2015/11/570397.jpg?x36734');
             }
 /* Preloder */
-#preloder {
+        #preloder {
 	position: fixed;
 	width: 100%;
 	height: 100%;

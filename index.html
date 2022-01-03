@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Crash-Finder.Ge</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Crash-Finder.Ge">
+	<meta name="keywords" content="Crash-Finder>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/owl.carousel.css"/>
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/styleaz.css"/>
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/styles.css"/>
+	<link rel="stylesheet" href="http://34.159.25.88/FDizaini/css/animate.css"/>
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+			    <div class="user-panel">
+			    <form id = "search-form">
+							<a class="site-logo" href="index.html">
+				<img src="http://34.159.25.88/FDizaini/img/logo.png" alt="">
+			</a>
+						<nav class="main-menu">
+				<ul>
+					<li><a href="review.html">ჩვენს შესახებ</a></li>
+					<li><a href="categories.html">ჩატი</a></li>
+				</ul>
+			</nav>
+			</ul>
+<div id="searchcolumn">
+    <form id = "search-form">
+    <label style="color: red" for="maxprice">მინიმალური. ფასი:</label>
+    <input type="number" min="30" max="2000" name="minprice" value="{{ minprice }}">
+    <label style="color: red" for="maxprice">მაქსიმალური ფასი:</label>
+    <input type="number" min="30" max="2000" name="maxprice" value="{{ maxprice }}">
+    <button class="yle" "buttonser" on click="document.getElementById('search-form').submit()">🔍</button>
+    </form>
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+	<!-- Header section end -->
+	<!-- Latest news section -->
+	<div class="latest-news-section">
+	<div class="ln-title">სიახლეები</div>
+		<div class="news-ticker">
+			<div class="news-ticker-contant">
+				<div class="nt-item"><span class="new">ახალი</span>სულ მალე აიწყობა საიტი სადაც დაგირიგდებათ თქვენ თქვენი უსერები პაროლები . </div>
+				<div class="nt-item"><span class="strategy"></span>ადმინისტრაცია გილოცავთ ახალ 2022 წელს. </div>
+			</div>
+		</div>
+	</div>
+	<!-- Latest news section end -->
+	
+
+            <table class="table" style="color: aqua">
+                <tbody>
+                    <tr>
+                        <th>მარკეტი</th>
+                        <th>ფოტო</th>
+                        <th>სახელი</th>
+                        <th>ნივთი</th>
+						<th>ფასი</th>
+                    </tr>
+                    {% for listing in listings %}
+                        <tr class="listing-row" id="lr-{{ listing.owner_avatar }}-{{ listing.owner_name }}">
+                            <td><a href="https://steamcommunity.com/market/listings/730/{{ listing.item_name }}" target="_blank">Market Link</a></td>
+                            <td href="https://steamcommunity.com/search/users/#text={{ listing.owner_name }}" 
+							    class="avatar-cell"
+                                target="_blank"  onClick="copyText('{{ listing.item_name }}')" 
+                                style="background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/{{ listing.owner_avatar }}.jpg')
+								no-repeat;"></td>
+                            <td><a href="https://steamcommunity.com/search/users/#text={{ listing.owner_name }}" target="_blank">{{ listing.owner_name }}</a></td>
+                            <td onclick="copyText('{{ listing.item_name }}')"> {{ listing.item_name }} - {{ listing.price }}$</td>
+							<td>{{ listing.price }}$</td>
+                            <!-- She kle kaco shena gaajvi> -->
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            const VISITED_LINK_DELIMINATOR = ',x,123,,123,x,'
+            const VISITED_LINKS_LS = 'visitedLinks'
+
+            const main = () => {
+                addSubmitListener()
+                styleVisitedListings()
+                // OE GAAJVI METQI
+            }
+
+            const copyText = (text) => {
+                const preText = "Hello add me back, just reached the weekly friend invites limit. I'm interested in your "
+                const copyText = document.createElement('textArea')
+
+                copyText.value = preText + text
+                document.body.appendChild(copyText)
+
+                copyText.select()
+                copyText.setSelectionRange(0, 99999)
+
+                document.execCommand('copy')
+                document.body.removeChild(copyText)
+            }
+
+            const addSubmitListener = () => {
+                var myForm = document.getElementById('search-form');
+                myForm.addEventListener('submit', function () {
+                    var allInputs = myForm.getElementsByTagName('input');
+
+                    for (var i = 0; i < allInputs.length; i++) {
+                        var input = allInputs[i];
+
+                        if (input.name && !input.value) {
+                            input.name = '';
+                        }
+                    }
+                });
+            }
+
+            const openAvatarFinder = (avatar, name) => {
+                addToVisitedLinks(avatar, name)
+                window.open('/avatar-finder?avatar=' + avatar + '&name=' + name, '_blank')
+            }
+
+            const addToVisitedLinks = (avatar, name) => {
+                let visitedLinks = localStorage.getItem(VISITED_LINKS_LS)
+                let linkId = avatar + '-' + name
+                if (visitedLinks) {
+                    visitedLinks = visitedLinks.split(VISITED_LINK_DELIMINATOR)
+                } else {
+                    visitedLinks = []
+                }
+
+                if (!visitedLinks.includes(linkId)) {
+                    visitedLinks.push(linkId)
+                    let linksToSave = '';
+                    for (linkId of visitedLinks) {
+                        linksToSave += linkId + VISITED_LINK_DELIMINATOR
+                    }
+                    localStorage.setItem(VISITED_LINKS_LS, linksToSave.substr(0, linksToSave.length - VISITED_LINK_DELIMINATOR.length))
+                    console.log(localStorage.getItem(VISITED_LINKS_LS))
+                    document.getElementById('lr-' + linkId).classList.add('visited')
+                }
+            }
+
+            const styleVisitedListings = () => {
+                visitedLinks = localStorage.getItem(VISITED_LINKS_LS)
+                if (!visitedLinks) {
+                    return
+                }
+
+                visitedLinks = visitedLinks.split(VISITED_LINK_DELIMINATOR)
+                for (linkId of visitedLinks) {
+                    let elem = document.getElementById('lr-' + linkId)
+                    if (elem) {
+                        elem.classList.add('visited')
+                    }
+                }
+            }
+
+            const addButtonListener = () => {
+                const btns = document.getElementsByClassName('user-count')
+                for (let btn of btns) {
+                    btn.addEventListener('click', () => {
+                        if (btn.innerHTML == 'Wait') {
+                            return
+                        }
+                        btn.innerHTML = 'Wait'
+                        const xhttp = new XMLHttpRequest()
+
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                btn.innerHTML = this.responseText
+                            }
+                        }
+
+                        const username = btn.getAttribute('username')
+                        xhttp.open('GET', './user-count?name=' + username, true)
+                        xhttp.send()
+
+
+                    })
+                }
+            }
+
+        </script>
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="http://34.159.25.88/FDizaini/js/jquery-3.2.1.min.js"></script>
+	<script src="http://34.159.25.88/FDizaini/js/bootstrap.min.js"></script>
+	<script src="http://34.159.25.88/FDizaini/js/owl.carousel.min.js"></script>
+	<script src="http://34.159.25.88/FDizaini/js/jquery.marquee.min.js"></script>
+	<script src="http://34.159.25.88/FDizaini/js/main.js"></script>
+    </body>
+</html>

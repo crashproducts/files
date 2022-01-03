@@ -1,0 +1,137 @@
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+            }
+
+            #main-container {
+				font-family: Tristan;
+                margin: 0;
+                padding: 5px 100px;
+                background-color: black;
+                color: white;
+            }
+
+            #main-table {
+			font-family: Tristan;
+                width: 100%;
+                border-collapse: collapse;
+                background-color: black;
+            }
+
+            #main-table .avatar-cell {
+                background-size: 48px !important;
+                background-position: center !important;
+                height: 48px;
+                width: 48px;
+                padding: 1px;
+                cursor: pointer;
+            }
+			
+            #main-table .copy-text-button {
+			font-family: Tristan;
+                display: inline-block;
+                border-radius: 4px;
+                background-color: green;
+                border: none;
+                color: red;
+                text-align: center;
+                padding: 5px;
+                width: 50px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+            }
+
+            #main-table .copy-text-button span {
+			font-family: Fantasy;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            #main-table .listing-row.visited {
+			    font-family: Fantasy;
+                background-color: red;
+                color: black;
+            }
+            a:link {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            text-decoration: none;
+            }
+
+            a:visited {
+            color: rgb(0, 150, 255);
+            background-color: transparent;
+            text-decoration: none;
+            }
+
+            a:hover {
+            color: rgb(255, 0, 0);
+            background-color: transparent;
+            text-decoration: underline;
+            }
+
+            a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+            }
+			:root {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
+}
+
+*,
+*::before,
+*::after {
+
+}
+
+.neon-button {
+  font-size: 111rem;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 5.25em;
+}
+
+
+.neon-button:hover,
+.neon-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+}
+.button5 {border-radius: 50%;}
+.button {
+  background-color: #000; /* Green */
+  border: none;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}		
+
+i {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px ;
+  padding: 10px;
+}

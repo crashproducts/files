@@ -124,6 +124,12 @@ border: none;
     width: 100px;
 }
 
+.langbar {
+text-align: left;
+position: fixed;
+background: white;
+}
+
 .loader.hidden {
     animation: fadeOut 1s;
     animation-fill-mode: forwards;

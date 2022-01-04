@@ -98,16 +98,16 @@ html,
 }
 
 .user-paneli {
-	float: center;
-	font-weight: 5200;
-	background: #000;
+	float: left;
+	font-weight: 5220;
+	background: #fff;
 	padding: 24px 28px;
 	border-radius: 30px;
 }
 
 .user-paneli a {
-	font-size: 14px;
-	background-color: #000;
+	font-size: 17px;
+	background-color: #fff;
 }
 
 .copytexti {

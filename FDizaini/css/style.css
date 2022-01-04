@@ -183,7 +183,7 @@ border: none;
 }
 
 /*---------------------
-  Latest News section
+  Latest News section1
 -----------------------*/
 
 .latest-news-section {
@@ -243,6 +243,70 @@ border: none;
 }
 
 .news-ticker-contant .nt-item span.racing {
+	background: #694eae;
+}
+
+/*---------------------
+  Latest News section2
+-----------------------*/
+
+.latest-news-section2 {
+	overflow: hidden;
+	display: block;
+	clear: both;
+	background: #131313;
+	padding: 24px 0;
+	position: relative;
+}
+
+.ln-title2 {
+	position: absolute;
+	height: 100%;
+	width: 29%;
+	left: 0;
+	top: 0;
+	text-align: right;
+	padding-top: 24px;
+	padding-right: 66px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	background: #ffb320;
+	z-index: 1;
+}
+
+.news-ticker2 {
+	width: 71%;
+	float: right;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.news-ticker-contant2 .nt-item2 {
+	margin-right: 35px;
+	color: #fff;
+	display: inline-block;
+}
+
+.news-ticker-contant2 .nt-item2 span {
+	margin-right: 35px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+	padding: 4px 20px;
+}
+
+.news-ticker-contant2 .nt-item2 span.new {
+	background: #ff205f;
+}
+
+.news-ticker-contant2 .nt-item2 span.strategy {
+	background: #4eae60;
+}
+
+.news-ticker-contant2 .nt-item2 span.racing {
 	background: #694eae;
 }
 
